@@ -9,15 +9,11 @@ For instructions or information, please refer to https://github.com/renolulic94/
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-# To wait for side load
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-# Allows us to use keyboard keys
-from selenium.webdriver.common.keys import Keys
 import time
-from sys import exit
+
+
+
+
 
 # Choose Network (ethereum/matic)
 network = "matic"
@@ -26,13 +22,13 @@ network = "matic"
 contractAddress = "0xc5df71db9055e6e1d9a37a86411fd6189ca2dbbb"
 
 # From which Token ID it should start refreshing?
-startFrom = 1753
+startFrom = 1930
 
 # Up-to which Token ID it should keep refreshing?
-refreshToNumber = 2300
+refreshToNumber = 2238
 
 
-# Run in the background (Headless mode)? True/False
+# Run in the background (Headless mode)? True/False **First character must be uppercase**
 runInBackground = True
 
 
