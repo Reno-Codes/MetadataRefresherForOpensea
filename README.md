@@ -1,6 +1,6 @@
 # Opensea Mass Metadata Refresh Bot
 
-A simple selenium bot that can refresh Metadata for entire collection on Opensea.
+A simple python bot that can refresh Metadata for entire collection on Opensea.
 
 Note: This was a fun project for experimental and learning purposes. 
 </br>
