@@ -18,6 +18,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import time
 
+#Chain? (ethereum/matic)
+chain = matic
+
 # NFT contract address
 contractAddress = "0xc5df71db9055e6e1d9a37a86411fd6189ca2dbbb"
 
@@ -41,7 +44,7 @@ options.add_argument(f'user-agent={user_agent}')
 
 for tokenId in range(startFrom, refreshToNumber):
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-    url = "https://opensea.io/assets/matic/{}/{}".format(contractAddress, tokenId)
+    url = "https://opensea.io/assets/{}/{}/{}".format(chain, contractAddress, tokenId)
     driver.get(url)
     try:
         try:
