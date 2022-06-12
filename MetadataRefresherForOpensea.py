@@ -3,7 +3,7 @@ By: Renato Lulic
 Instagram: renato_lulic
 Date: June 12th, 2022
 
-For instructions or information, please refer to README.md
+For instructions or information, please refer to https://github.com/renolulic94/MetadataRefresherForOpensea/blob/master/README.md
 '''
 
 from selenium import webdriver
@@ -21,14 +21,14 @@ import time
 # NFT contract address
 contractAddress = "0xc5df71db9055e6e1d9a37a86411fd6189ca2dbbb"
 
-# Start refreshing metadata from x Nft
+# From which Token ID it should start refreshing?
 startFrom = 1528
 
-# Up-to which number of Nfts do you want to keep refreshing?
+# Up-to which Token ID it should keep refreshing?
 refreshToNumber = 2300
 
 
-# Run in the background? True/False
+# Run in the background (Headless mode)? True/False
 runInBackground = False
 
 
@@ -52,7 +52,7 @@ for tokenId in range(startFrom, refreshToNumber):
             print("ERROR! Could not refresh!")
     except:
         print("An error has occurred")
-        time.sleep(0)
+        time.sleep(1)
         driver.quit()
 else:
      print("Refreshing finished!")
