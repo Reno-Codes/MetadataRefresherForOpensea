@@ -33,13 +33,23 @@ refreshToNumber = 2300
 
 
 # Run in the background (Headless mode)? True/False
-runInBackground = False
+runInBackground = True
 
 
 
 # ---------------------------------------- Do not change anything below this comment----------------------------------------------------------
-    
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    
 
 options = Options()
 options.headless = runInBackground
@@ -53,20 +63,21 @@ for tokenId in range(startFrom, refreshToNumber):
     elif network.lower() == "ethereum":
         url = "https://opensea.io/assets/{}/{}/{}".format(network.lower(), contractAddress, tokenId)
     else:
-        print("ERROR! Wrong network! ONLY ethereum or matic allowed!") 
+        print(bcolors.WARNING + "ERROR! Wrong network! ONLY ethereum or matic allowed!" + bcolors.ENDC) 
         quit()
 
+    print(bcolors.OKBLUE + "Refreshing NFT #" + str(tokenId) + bcolors.ENDC)
     driver.get(url)
     try:
         try:
             refreshButton = driver.find_element_by_xpath('./html/body/div[1]/div/main/div/div/div/div[2]/div/section[1]/div/div[2]/div/button[1]')
             refreshButton.click()
-            print("SUCCESS! Refreshing")
+            print(bcolors.OKGREEN + "SUCCESS - " + str(tokenId) + bcolors.ENDC)
         except:
-            print("ERROR! Could not refresh!")
+            print(bcolors.WARNING + "ERROR! Could not refresh - " + str(tokenId) + bcolors.ENDC) 
     except:
-        print("An error has occurred")
+        print(bcolors.WARNING + "An error has occurred" + bcolors.ENDC)
         time.sleep(1)
         driver.quit()
 else:
-     print("Refreshing finished!")
+     print(bcolors.OKGREEN +"Refreshing finished!" + bcolors.ENDC)
