@@ -72,9 +72,9 @@ for tokenId in range(startFrom, refreshToNumber):
         try:
             refreshButton = driver.find_element_by_xpath('./html/body/div[1]/div/main/div/div/div/div[2]/div/section[1]/div/div[2]/div/button[1]')
             refreshButton.click()
-            print(bcolors.OKGREEN + "SUCCESS - " + str(tokenId) + bcolors.ENDC)
+            print(bcolors.OKGREEN + "SUCCESS - #" + str(tokenId) + bcolors.ENDC)
         except:
-            print(bcolors.WARNING + "ERROR! Could not refresh - " + str(tokenId) + bcolors.ENDC) 
+            print(bcolors.WARNING + "ERROR! Could not refresh - #" + str(tokenId) + bcolors.ENDC) 
     except:
         print(bcolors.WARNING + "An error has occurred" + bcolors.ENDC)
         time.sleep(1)
