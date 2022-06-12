@@ -1,7 +1,7 @@
 # Opensea Mass Metadata Refresh Bot
 
 A simple python bot that can refresh Metadata for entire collection on Opensea.
-
+Only ETHEREUM and MATIC supported
 Note: This was a fun project for experimental and learning purposes. 
 </br>
 
