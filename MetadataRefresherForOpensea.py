@@ -22,7 +22,7 @@ from sys import exit
 # Choose Network (ethereum/matic)
 network = "matic"
 
-# NFT contract address
+# Enter NFT contract address
 contractAddress = "0xc5df71db9055e6e1d9a37a86411fd6189ca2dbbb"
 
 # From which Token ID it should start refreshing?
