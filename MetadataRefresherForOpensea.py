@@ -3,7 +3,7 @@ By: Renato Lulic
 Instagram: renato_lulic
 Date: June 12th, 2022
 
-For instructions or information, please refer to https://github.com/renolulic94/MetadataRefresherForOpensea/blob/master/README.md
+For instructions or information, please refer to https://github.com/Reno-Codes/MetadataRefresherForOpensea/blob/master/README.md
 '''
 
 from selenium import webdriver
